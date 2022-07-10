@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)file:///C:/Users/91964/OneDrive/Desktop/prepbytes/analog/JSFiddle%20-%20Code%20Playground_files/saved_resource.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>problem solving - JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script type="text/javascript">
+        var height
+        var force_height = null
+        var slug = "twycskzq"
+        var show_src = "//fiddle.jshell.net/twycskzq/2/show/light/"
+        var resize_element_counter = 0
+        var shell_edit_url = "/twycskzq/2/light/"
+
+      </script>
+
+      <script src="./highlight.pack.js.download"></script>
+      <script src="./embed.js.download"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+    <style type="text/css" media="screen">
+    /* */</style>
+
+  </head>
+  <body>
+    <div id="full-embed">
+        <header>
+          <h1>
+            <a href="https://jsfiddle.net/twycskzq/2/" target="_blank">
+              <svg width="34" height="40">
+      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
+    </svg>Edit in JSFiddle
+            </a>
+          </h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="active">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/twycskzq/2/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="html" href="https://jsfiddle.net/twycskzq/2/embedded/#HTML">HTML</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="css" href="https://jsfiddle.net/twycskzq/2/embedded/#CSS">CSS</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="result" href="https://jsfiddle.net/twycskzq/2/embedded/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 81.0938px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont JavaScript active hljs"><span class="hljs-comment"><span class="hljs-comment">// Ques:1 Find the Smaller Angle</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> Minimal_Angle = <span class="hljs-function"><span class="hljs-function">(</span><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">h, m</span></span></span><span class="hljs-function">) =&gt;</span></span> 
+{
+   <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(h===<span class="hljs-number"><span class="hljs-number">12</span></span>){
+            h = <span class="hljs-number"><span class="hljs-number">0</span></span>;
+          }   
+          <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(m===<span class="hljs-number"><span class="hljs-number">60</span></span>){
+            m = <span class="hljs-number"><span class="hljs-number">0</span></span>;
+            h+=<span class="hljs-number"><span class="hljs-number">1</span></span>;
+            <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(h&gt;<span class="hljs-number"><span class="hljs-number">12</span></span>){
+              h = h<span class="hljs-number"><span class="hljs-number">-12</span></span>
+            }
+          }
+          <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> hAngle = <span class="hljs-number"><span class="hljs-number">0.5</span></span>*(h*<span class="hljs-number"><span class="hljs-number">60</span></span>+m);
+          <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> mAngle = <span class="hljs-number"><span class="hljs-number">6</span></span>*m;
+          <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> result = <span class="hljs-built_in"><span class="hljs-built_in">Math</span></span>.abs(hAngle-mAngle)
+          result = <span class="hljs-built_in"><span class="hljs-built_in">Math</span></span>.min((<span class="hljs-number"><span class="hljs-number">360</span></span>-result),result)
+          <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> result;     
+};
+ <span class="hljs-comment"><span class="hljs-comment">//Ques:2 Check whether the year is Leap year or not.</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> Check_Leap = <span class="hljs-function"><span class="hljs-function">(</span><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">year</span></span></span><span class="hljs-function">) =&gt;</span></span> 
+{
+  <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(year%<span class="hljs-number"><span class="hljs-number">4</span></span>===<span class="hljs-number"><span class="hljs-number">0</span></span>){
+            <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(year%<span class="hljs-number"><span class="hljs-number">100</span></span>===<span class="hljs-number"><span class="hljs-number">0</span></span>){
+              <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(year%<span class="hljs-number"><span class="hljs-number">400</span></span>===<span class="hljs-number"><span class="hljs-number">0</span></span>){
+                <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"Leap Year"</span></span>;
+              }<span class="hljs-keyword"><span class="hljs-keyword">else</span></span>{
+                <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"Non Leap Year"</span></span>;
+              }
+            }<span class="hljs-keyword"><span class="hljs-keyword">else</span></span>{
+              <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"Leap Year"</span></span>;
+            }
+             }<span class="hljs-keyword"><span class="hljs-keyword">else</span></span>{
+               <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"Non Leap Year"</span></span>
+           }
+  
+
+};
+ <span class="hljs-comment"><span class="hljs-comment">//</span></span>
+ 
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> Perfect_Check = <span class="hljs-function"><span class="hljs-function">(</span><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">N</span></span></span><span class="hljs-function">) =&gt;</span></span> 
+{
+   <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(N===<span class="hljs-number"><span class="hljs-number">1</span></span>){
+            <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"YES"</span></span>
+          }<span class="hljs-keyword"><span class="hljs-keyword">else</span></span>{
+            <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> sum = <span class="hljs-number"><span class="hljs-number">0</span></span>;
+            <span class="hljs-keyword"><span class="hljs-keyword">for</span></span>(<span class="hljs-keyword"><span class="hljs-keyword">let</span></span> i = <span class="hljs-number"><span class="hljs-number">1</span></span>;i&lt; N;i++){
+              <span class="hljs-keyword"><span class="hljs-keyword">if</span></span>(N%i === <span class="hljs-number"><span class="hljs-number">0</span></span>){
+                sum += i
+              }
+            }
+            <span class="hljs-keyword"><span class="hljs-keyword">if</span></span> (sum === N){
+              <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"YES"</span></span>
+            }<span class="hljs-keyword"><span class="hljs-keyword">else</span></span>{
+              <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> <span class="hljs-string"><span class="hljs-string">"NO"</span></span>
+            }
+          }      
+        
+};
+<span class="hljs-comment"><span class="hljs-comment">//Ques:4 Reverse a Number </span></span>
+ 
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> Reverse_Number = <span class="hljs-function"><span class="hljs-function">(</span><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">N</span></span></span><span class="hljs-function">) =&gt;</span></span> 
+{
+  N = N.toString()
+        <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> newNum = <span class="hljs-number"><span class="hljs-number">0</span></span>;
+        <span class="hljs-keyword"><span class="hljs-keyword">let</span></span> rem = <span class="hljs-number"><span class="hljs-number">0</span></span>;
+        <span class="hljs-keyword"><span class="hljs-keyword">for</span></span> (<span class="hljs-keyword"><span class="hljs-keyword">let</span></span> i <span class="hljs-keyword"><span class="hljs-keyword">of</span></span> N) {
+          rem = N % <span class="hljs-number"><span class="hljs-number">10</span></span>;
+          N = <span class="hljs-built_in"><span class="hljs-built_in">Math</span></span>.floor(N / <span class="hljs-number"><span class="hljs-number">10</span></span>);
+          newNum = newNum * <span class="hljs-number"><span class="hljs-number">10</span></span> + rem;
+        }
+          <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> newNum; 
+
+};
+ <span class="hljs-comment"><span class="hljs-comment">// console.log(Reverse_Number([2345]))</span></span>
+<span class="hljs-comment"><span class="hljs-comment">//Que:5 Substring Check</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> Substring_Check = <span class="hljs-function"><span class="hljs-function">(</span><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">S1, S2</span></span></span><span class="hljs-function">) =&gt;</span></span> 
+{
+   <span class="hljs-keyword"><span class="hljs-keyword">return</span></span> S1.includes(S2)?<span class="hljs-string"><span class="hljs-string">"YES"</span></span>:<span class="hljs-string"><span class="hljs-string">"NO"</span></span>    
+};
+
+
+
+ 
+
+
+ 
+
+</pre>
+              <pre class="tCont HTML hljs"></pre>
+              <pre class="tCont CSS hljs"></pre>
+              <div class="tCont result " id="result">
+              </div>
+        </div>
+    </div>
+    
+  
+
+</body></html>
